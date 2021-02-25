@@ -1,7 +1,7 @@
-import csv from 'csvtojson';
-import fs from 'fs';
+const csv = require('csvtojson');
+const fs = require('fs');
 
-export const csvToTxt = (fromFile, toFile) => {
+const csvToTxt = (fromFile, toFile) => {
     const readable = fs.createReadStream(fromFile);
     const writable = fs.createWriteStream(toFile);
 
@@ -20,3 +20,5 @@ export const csvToTxt = (fromFile, toFile) => {
             writable.write('\n');
     });
 }
+
+module.exports = csvToTxt;

@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:task2": "nodemon Basics/task_1_2/index.js --exec",
-    "start:task3-1": "babel-node Basics/task_1_3/index.js",
-    "start:task3-2": "babel-node Basics/task_1_3/csv-to-txt.js"
+    "start:task3": "babel-node Basics/task_1_3/index.js"
   },
   "repository": {
     "type": "git",
