@@ -14,4 +14,4 @@ consoleLine.on('line', (line) => {
     consoleLine.close();
 });
 
-csvToTxt('Basics/task_1_2/csv/nodejs-hw1-ex1.csv', 'Basics/task_1_2/txt/nodejs-hw1-ex2.txt');
+csvToTxt('1_Basics/task_1_2/csv/nodejs-hw1-ex1.csv', '1_Basics/task_1_2/txt/nodejs-hw1-ex2.txt');
