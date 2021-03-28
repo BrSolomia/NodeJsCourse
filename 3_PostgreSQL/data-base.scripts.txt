@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS users (id VARCHAR ( 50 ) PRIMARY KEY, login VARCHAR ( 50 ) UNIQUE NOT NULL, password VARCHAR ( 50 ) UNIQUE NOT NULL, age INT NOT NULL, isDeleted BOOLEAN);
+SELECT * FROM users;
+INSERT INTO users (id, login, password, age, isDeleted) values ('id1', 'login1', 'password1', '10', false);
+INSERT INTO users (id, login, password, age, isDeleted) values ('id2', 'login2', 'password2', '20', false);
+INSERT INTO users (id, login, password, age, isDeleted) values ('id3', 'login3', 'password3', '30', false);
+INSERT INTO users (id, login, password, age, isDeleted) values ('id4', 'login4', 'password4', '40', false);
