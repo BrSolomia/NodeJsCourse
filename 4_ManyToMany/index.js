@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { db } from './data-access';
-import { userRouter } from './routers';
+import { groupRouter, userGroupRouter, userRouter } from './routers';
 
 const app = express();
 
@@ -12,4 +12,6 @@ db.authenticate()
 app.listen(3000);
 app
     .use(bodyParser.json())
-    .use('/user', userRouter);
+    .use('/user', userRouter)
+    .use('/group', groupRouter)
+    .use('/userGroup',userGroupRouter);

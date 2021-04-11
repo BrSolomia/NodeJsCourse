@@ -9,7 +9,8 @@
     "start:task2": "nodemon 1_Basics/task_1_2/index.js --exec",
     "start:task3": "babel-node 1_Basics/task_1_3/index.js",
     "start:homework2": "babel-node 2_REST/index.js",
-    "start:homework3": "babel-node 3_PostgreSQL/index.js"
+    "start:homework3": "babel-node 3_PostgreSQL/index.js",
+    "start:homework4": "babel-node 4_ManyToMany/index.js"
   },
   "repository": {
     "type": "git",

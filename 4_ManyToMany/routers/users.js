@@ -3,7 +3,7 @@ import { getUsers, getAutoSuggestUsers, getUserById, createUser, updateUserById,
 
 export const userRouter = express.Router();
 
-userRouter.get('/users', getUsers);
+userRouter.get('/', getUsers);
 userRouter.get('/auto-suggest', getAutoSuggestUsers);
 userRouter.get('/:id', getUserById);
 userRouter.post('/create', createUser);
