@@ -10,7 +10,8 @@
     "start:task3": "babel-node 1_Basics/task_1_3/index.js",
     "start:homework2": "babel-node 2_REST/index.js",
     "start:homework3": "babel-node 3_PostgreSQL/index.js",
-    "start:homework4": "babel-node 4_ManyToMany/index.js"
+    "start:homework4": "babel-node 4_ManyToMany/index.js",
+    "start:homework5": "babel-node 5_Logging/index.js"
   },
   "repository": {
     "type": "git",
@@ -38,7 +39,8 @@
     "nodemon": "^2.0.7",
     "pg": "^8.5.1",
     "pg-hstore": "^2.3.3",
-    "sequelize": "^6.6.2"
+    "sequelize": "^6.6.2",
+    "winston": "^3.3.3"
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",

@@ -1,0 +1,32 @@
+CREATE TABLE IF NOT EXISTS users (id VARCHAR ( 50 ) PRIMARY KEY, login VARCHAR ( 50 ) UNIQUE NOT NULL, password VARCHAR ( 50 ) UNIQUE NOT NULL, age INT NOT NULL, isDeleted BOOLEAN);
+SELECT * FROM users;
+INSERT INTO users (id, login, password, age, isDeleted) values ('id1', 'login1', 'password1', '10', false);
+INSERT INTO users (id, login, password, age, isDeleted) values ('id2', 'login2', 'password2', '20', false);
+INSERT INTO users (id, login, password, age, isDeleted) values ('id3', 'login3', 'password3', '30', false);
+INSERT INTO users (id, login, password, age, isDeleted) values ('id4', 'login4', 'password4', '40', false);
+
+
+CREATE TABLE IF NOT EXISTS groups (id VARCHAR ( 50 ) PRIMARY KEY, name VARCHAR ( 50 ) UNIQUE NOT NULL, permissions VARCHAR ( 15 ) []);
+SELECT * FROM groups;
+
+
+CREATE TABLE IF NOT EXISTS userGroup (id SERIAL PRIMARY KEY, groupId VARCHAR ( 50 ) REFERENCES groups(id), userId VARCHAR ( 50 ) REFERENCES users(id));
+CREATE TABLE IF NOT EXISTS userGroup (groupId VARCHAR ( 50 ) REFERENCES groups(id) PRIMARY KEY, userId VARCHAR ( 50 ) []);
+CREATE TABLE IF NOT EXISTS userGroups (id SERIAL PRIMARY KEY, groupId VARCHAR ( 50 ) PRIMARY KEY, userId VARCHAR ( 50 ) []);
+
+SELECT * FROM userGroups;
+DELETE FROM userGroups;
+
+INSERT INTO userGroups (groupId, userId) values ('group1', ARRAY['id2']);
+INSERT INTO userGroups (groupId, userId) values ('group2', ARRAY['id3']);
+INSERT INTO userGroups (groupId, userId) values ('group3', ARRAY['id4', 'id7']);
+
+
+
+
+INSERT INTO userGroups (groupId, userId) values ('group1', 'id2');
+INSERT INTO userGroups (groupId, userId) values ('group2', 'id3');
+INSERT INTO userGroups (groupId, userId) values ('group3', 'id4');
+INSERT INTO userGroups (groupId, userId) values ('group3', 'id7');
+
+DROP TABLE userGroups;
